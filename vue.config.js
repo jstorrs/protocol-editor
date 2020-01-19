@@ -1,4 +1,5 @@
 module.exports = {
-  outputDir: 'docs',
-  publicPath: '/protocol-editor/'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/protocol-editor/'
+    : '/'
 }
